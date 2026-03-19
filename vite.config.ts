@@ -25,10 +25,9 @@ export default defineConfig({
   },
   define: {
     'global': 'globalThis',
-    'process.env': '{}',
     'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
     'process.browser': 'true',
     'process.version': '""',
-    'process.cwd': '() => "/"',
+    'process.cwd': '"/"',
   }
 })
