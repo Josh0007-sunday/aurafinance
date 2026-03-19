@@ -8,11 +8,10 @@ export default defineConfig({
     react(),
     tailwindcss(),
     nodePolyfills({
-      // Explicitly disable globals to avoid the esbuild banner issue in Vite 8
       globals: {
-        Buffer: false,
-        global: false,
-        process: false,
+        Buffer: true,
+        global: true,
+        process: true,
       },
       protocolImports: true,
     }),

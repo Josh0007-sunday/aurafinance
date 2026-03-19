@@ -8,6 +8,11 @@
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      // Polyfill for "exports is not defined" error from CommonJS modules in Vite
+      window.global = window.global || window;
+      var exports = {};
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
