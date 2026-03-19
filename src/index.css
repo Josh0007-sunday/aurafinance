@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+@theme {
+  --color-accent: #7c5cfc;
+  --color-solana: #14f195;
+  --color-stacks: #5546ff;
+  --color-bg-dark: #0e0f17;
+  --color-card-bg: rgba(18, 18, 28, 0.85);
+  --color-border-main: #2e303a;
+
+  --font-sans: 'Inter', system-ui, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: ui-monospace, Consolas, monospace;
+
+  --animate-spin-slow: spin 3s linear infinite;
+}
+
+/* Wallet Adapter Overrides */
+.wallet-adapter-button {
+  background-color: rgba(255, 255, 255, 0.04) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 0 !important;
+  height: 48px !important;
+  padding: 0 24px !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.15em !important;
+  color: white !important;
+  transition: all 0.3s ease !important;
+  font-family: inherit !important;
+}
+
+.wallet-adapter-button:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border-color: var(--color-accent) !important;
+}
+
+.wallet-adapter-button-trigger {
+  width: 100% !important;
+  justify-content: center !important;
+}
+
+.wallet-adapter-dropdown {
+  width: 100% !important;
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+:root {
+  color-scheme: dark;
+  color: #9ca3af;
+  background: var(--color-bg-dark);
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2 {
+  font-family: var(--heading);
+  font-weight: 500;
+  color: var(--text-h);
+}
+
+h1 {
+  font-size: 56px;
+  letter-spacing: -1.68px;
+  margin: 32px 0;
+
+  @media (max-width: 1024px) {
+    font-size: 36px;
+    margin: 20px 0;
+  }
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 118%;
+  letter-spacing: -0.24px;
+  margin: 0 0 8px;
+
+  @media (max-width: 1024px) {
+    font-size: 20px;
+  }
+}
+
+p {
+  margin: 0;
+}
+
+code,
+.counter {
+  font-family: var(--mono);
+  display: inline-flex;
+  border-radius: 4px;
+  color: var(--text-h);
+}
+
+code {
+  font-size: 15px;
+  line-height: 135%;
+  padding: 4px 8px;
+  background: var(--code-bg);
+}
